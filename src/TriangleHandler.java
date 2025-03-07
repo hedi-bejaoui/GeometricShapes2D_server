@@ -17,7 +17,8 @@ public class TriangleHandler extends ShapeHandler {
         System.out.println("Drawing Triangle...");
         int[] xPoints = {Integer.parseInt(tokens[2]), Integer.parseInt(tokens[4]), Integer.parseInt(tokens[6])};
         int[] yPoints = {Integer.parseInt(tokens[3]), Integer.parseInt(tokens[5]), Integer.parseInt(tokens[7])};
-        Color color = getColor(tokens[8]);
+        String colorName = tokens[tokens.length - 1].trim().toLowerCase();
+        Color color = DrawingServer.getColor(colorName);
         graphics.setColor(color);
         graphics.drawPolygon(xPoints, yPoints, 3);
     }

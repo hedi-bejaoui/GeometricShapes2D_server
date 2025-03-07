@@ -22,7 +22,13 @@ public class PolygonHandler extends ShapeHandler{
             xPoints[i] = Integer.parseInt(tokens[2 + i * 2]);
             yPoints[i] = Integer.parseInt(tokens[3 + i * 2]);
         }
-        Color color = getColor(tokens[tokens.length - 1]);
+        String colorName = tokens[tokens.length - 1].trim().toLowerCase();
+        Color color = DrawingServer.getColor(colorName);
+
+
+
+
+        System.out.println(color);
         graphics.setColor(color);
         graphics.drawPolygon(xPoints, yPoints, n);
     }

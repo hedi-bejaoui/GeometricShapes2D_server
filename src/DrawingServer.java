@@ -23,7 +23,7 @@ DrawingServer {
         System.out.println("Server is running...");
 
         Frame frame = new Frame("Drawing Server");
-        frame.setSize(800, 600);
+        frame.setSize(1000, 800);
         frame.setVisible(true);
         frame.setIgnoreRepaint(true);
         frame.createBufferStrategy(2);
@@ -64,7 +64,7 @@ DrawingServer {
 
 
 
-    private static Color getColor(String colorName) {
+    static Color getColor(String colorName) {
         return colorMap.getOrDefault(colorName.toLowerCase(), Color.BLACK);
     }
 }

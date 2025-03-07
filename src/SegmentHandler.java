@@ -19,7 +19,8 @@ public class SegmentHandler extends ShapeHandler {
         int y1 = Integer.parseInt(tokens[3]);
         int x2 = Integer.parseInt(tokens[4]);
         int y2 = Integer.parseInt(tokens[5]);
-        Color color = getColor(tokens[6]);
+        String colorName = tokens[tokens.length - 1].trim().toLowerCase();
+        Color color = DrawingServer.getColor(colorName);
         graphics.setColor(color);
         graphics.drawLine(x1, y1, x2, y2);
     }

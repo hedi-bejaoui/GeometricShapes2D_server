@@ -19,6 +19,7 @@ public abstract class ShapeHandler implements Handler {
         }
     }
 
+
     protected abstract boolean canHandle(String shapeType);
 
     protected abstract void process(String[] tokens, Graphics graphics);

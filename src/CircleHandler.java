@@ -19,7 +19,8 @@ public class CircleHandler extends ShapeHandler {
         int cx = Integer.parseInt(tokens[2]);
         int cy = Integer.parseInt(tokens[3]);
         int radius = Integer.parseInt(tokens[4]);
-        Color color = getColor(tokens[5]);
+        String colorName = tokens[tokens.length - 1].trim().toLowerCase();
+        Color color = DrawingServer.getColor(colorName);
         graphics.setColor(color);
         graphics.drawOval(cx - radius, cy - radius, radius * 2, radius * 2);
     }
